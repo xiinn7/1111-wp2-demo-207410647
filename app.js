@@ -16,6 +16,8 @@ var usersRouter = require('./routes/users');
 const cardRouter_47 = require('./routes/cardRouter_47');
 const cardRouter2_47 = require('./routes/cardRouter2_47');
 
+// const card2ApiRouter_47 = require('./routes/api/apiCard2Router_47');
+
 var app = express();
 
 // view engine setup
@@ -34,13 +36,15 @@ app.use('/users', usersRouter);
 app.use('/card_47', cardRouter_47);
 app.use('/card2_47', cardRouter2_47);
 
+// app.use('/api/card2_47', card2ApiRouter_47);
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
