@@ -1,5 +1,5 @@
 var express = require('express');
-var Router = express.Router;
+var router = express.Router;
 
 const db = require('../../utils/database');
 
